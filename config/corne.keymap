@@ -53,6 +53,11 @@
             key-positions = <32 33>;
             layers = <0 1 2 3 4 5 6>;
         };
+
+        return {
+            bindings = <&kp ENTER>;
+            key-positions = <40 23>;
+        };
     };
 
     keymap {
