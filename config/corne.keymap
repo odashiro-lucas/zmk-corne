@@ -13,44 +13,44 @@
         compatible = "zmk,combos";
 
         goto_functions {
-            bindings = <&tog 3>;
+            bindings = <&to 3>;
             key-positions = <2 3>;
             layers = <0 1 2 3 4 5 6 7>;
         };
 
         goto_base {
-            bindings = <&tog 0>;
-            key-positions = <14 15 20 21>;
+            bindings = <&to 0>;
+            key-positions = <15 20>;
             layers = <0 1 2 3 4 5 6 7>;
             timeout-ms = <0>;
         };
 
         goto_operators {
-            bindings = <&tog 4>;
+            bindings = <&to 4>;
             key-positions = <8 9>;
             layers = <0 1 2 3 4 5 6 7>;
         };
 
         goto_numbers {
-            bindings = <&tog 3>;
+            bindings = <&to 3>;
             key-positions = <14 15>;
             layers = <0 1 2 3 4 5 6 7>;
         };
 
         goto_number_pad {
-            bindings = <&none>;
+            bindings = <&to 6>;
             key-positions = <19 20 21>;
             layers = <0 1 2 3 4 5 6 7>;
         };
 
         goto_brackets {
-            bindings = <&tog 5>;
+            bindings = <&to 5>;
             key-positions = <20 21>;
             layers = <0 1 2 3 4 5 6 7>;
         };
 
         goto_bluetooth {
-            bindings = <&tog 7>;
+            bindings = <&to 7>;
             key-positions = <29 5>;
             layers = <0 1 2 3 4 5 6 7>;
         };
@@ -59,6 +59,24 @@
             bindings = <&kp SPACE>;
             key-positions = <40>;
             layers = <0 1 2 3 4 5 6 7>;
+        };
+
+        navigation {
+            bindings = <&mo 1>;
+            key-positions = <36>;
+            layers = <0 1 2 3 4 5 6 7>;
+        };
+    };
+
+    behaviors {
+        my_mod_tap: my_mod_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MY_MOD_TAP";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <400>;
+            flavor = "tap-preferred";
         };
     };
 
@@ -73,10 +91,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&trans  &mt LS(Q) Q  &mt LS(W) W  &mt LS(E) E  &mt LS(R) R  &mt LS(T) T    &mt LS(Y) Y  &mt LS(U) U  &mt LS(I) I   &mt LS(O) O  &mt LS(P) P             &trans
-&trans  &mt LS(A) A  &mt LS(S) S  &mt LS(D) D  &mt LS(F) F  &mt LS(G) G    &mt LS(H) H  &mt LS(J) J  &mt LS(K) K   &mt LS(L) L  &mt DOUBLE_QUOTES APOS  &trans
-&trans  &mt LS(Z) Z  &mt LS(X) X  &mt LS(C) C  &mt LS(V) V  &mt LS(B) B    &mt LS(N) N  &mt LS(M) M  &kp KP_COMMA  &kp KP_DOT   &mt QUESTION KP_SLASH   &trans
-                                  &trans       &mo 1        &trans         &trans       &trans       &trans
+&trans  &my_mod_tap LS(Q) Q  &my_mod_tap LS(W) W  &my_mod_tap LS(E) E  &my_mod_tap LS(R) R  &my_mod_tap LS(T) T    &my_mod_tap LS(Y) Y  &my_mod_tap LS(U) U  &my_mod_tap LS(I) I  &my_mod_tap LS(O) O  &my_mod_tap LS(P) P         &trans
+&trans  &my_mod_tap LS(A) A  &my_mod_tap LS(S) S  &my_mod_tap LS(D) D  &my_mod_tap LS(F) F  &my_mod_tap LS(G) G    &my_mod_tap LS(H) H  &my_mod_tap LS(J) J  &my_mod_tap LS(K) K  &my_mod_tap LS(L) L  &my_mod_tap LS(SEMI) SEMI   &trans
+&trans  &my_mod_tap LS(Z) Z  &my_mod_tap LS(X) X  &my_mod_tap LS(C) C  &my_mod_tap LS(V) V  &my_mod_tap LS(B) B    &my_mod_tap LS(N) N  &my_mod_tap LS(M) M  &kp LS(KP_COMMA)     &kp KP_DOT           &my_mod_tap LS(FSLH) SLASH  &trans
+                                                  &trans               &trans               &trans                 &trans               &trans               &trans
             >;
         };
 
@@ -91,7 +109,7 @@
 &trans  &trans  &kp ESCAPE  &none      &trans     &trans    &trans  &kp BACKSPACE   &kp UP_ARROW    &kp DELETE     &kp PRINTSCREEN  &trans
 &trans  &trans  &kp TAB     &kp LSHFT  &kp LCTRL  &trans    &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT      &kp ENTER        &trans
 &trans  &trans  &kp LC(X)   &kp LC(C)  &kp LC(V)  &trans    &trans  &kp HOME        &kp PG_UP       &kp PAGE_DOWN  &kp END          &trans
-                            &trans     &trans     &trans    &trans  &kp SPACE       &trans
+                            &trans     &trans     &trans    &trans  &trans          &trans
             >;
         };
 
@@ -106,7 +124,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans   &trans
 &trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5    &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &mt F12 F11
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans   &trans
-                        &trans  &mo 1   &trans    &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
 
@@ -115,7 +133,7 @@
 &trans  &trans           &trans           &trans           &trans           &trans             &trans           &trans           &trans           &trans           &trans           &trans
 &trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_4  &kp KP_NUMBER_5    &kp KP_NUMBER_6  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMBER_0  &trans
 &trans  &trans           &trans           &trans           &trans           &trans             &trans           &trans           &trans           &trans           &trans           &trans
-                                          &trans           &mo 1            &trans             &trans           &trans           &trans
+                                          &trans           &trans           &trans             &trans           &trans           &trans
             >;
         };
 
@@ -124,7 +142,7 @@
 &trans     &trans    &trans  &trans    &trans      &trans         &trans     &trans         &trans                   &trans                &trans              &trans
 &kp GRAVE  &kp EXCL  &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT    &kp CARET  &kp AMPERSAND  &mt UNDERSCORE KP_MINUS  &mt KP_PLUS KP_EQUAL  &mt PIPE BACKSLASH  &trans
 &trans     &trans    &trans  &trans    &trans      &trans         &trans     &trans         &trans                   &trans                &trans              &trans
-                             &trans    &mo 1       &trans         &trans     &trans         &trans
+                             &trans    &trans      &trans         &trans     &trans         &trans
             >;
         };
 
@@ -133,7 +151,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &mt LEFT_BRACKET KP_LEFT_PARENTHESIS  &mt RIGHT_BRACKET KP_RIGHT_PARENTHESIS  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &kp LEFT_BRACE                        &kp RIGHT_BRACE                         &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &kp LESS_THAN                         &kp GREATER_THAN                        &trans  &trans
-                        &trans  &mo 1   &trans    &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
 
@@ -142,7 +160,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp KP_NUMBER_7  &mt KP_DIVIDE KP_NUMBER_8  &mt KP_MULTIPLY KP_NUMBER_9  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp KP_NUMBER_4  &kp KP_NUMBER_5            &kp KP_NUMBER_6              &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2            &mt DOT KP_NUMBER_3          &trans  &trans
-                        &trans  &mo 1   &trans    &trans  &kp KP_NUMBER_0  &trans
+                        &trans  &trans  &trans    &trans  &trans           &kp KP_NUMBER_0
             >;
         };
 
@@ -151,7 +169,7 @@
 &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans        &trans        &trans        &trans        &trans        &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans        &trans        &trans        &bt BT_CLR    &trans        &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                                          &trans        &mo 1         &trans    &trans  &trans  &trans
+                                          &trans        &trans        &trans    &trans  &trans  &trans
             >;
         };
     };
