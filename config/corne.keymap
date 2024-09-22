@@ -33,14 +33,6 @@
             tapping-term-ms = <250>;
             flavor = "tap-preferred";
         };
-
-        new_behavior: new_behavior {
-            compatible = "zmk,behavior-mod-morph";
-            label = "NEW_BEHAVIOR";
-            #binding-cells = <0>;
-            mods = <(MOD_LCTL)>;
-            bindings = <&kp A>;
-        };
     };
 
     keymap {
@@ -57,7 +49,7 @@
 &none  &my_mod_tap LS(Q) Q  &my_mod_tap LS(W) W  &my_mod_tap LS(E) E  &my_mod_tap LS(R) R  &my_mod_tap LS(T) T    &my_mod_tap LS(Y) Y  &my_mod_tap LS(U) U  &my_mod_tap LS(I) I  &my_mod_tap LS(O) O  &my_mod_tap LS(P) P         &none
 &none  &my_mod_tap LS(A) A  &my_mod_tap LS(S) S  &my_mod_tap LS(D) D  &my_mod_tap LS(F) F  &my_mod_tap LS(G) G    &my_mod_tap LS(H) H  &my_mod_tap LS(J) J  &my_mod_tap LS(K) K  &my_mod_tap LS(L) L  &my_mod_tap LS(SEMI) SEMI   &none
 &none  &my_mod_tap LS(Z) Z  &my_mod_tap LS(X) X  &my_mod_tap LS(C) C  &my_mod_tap LS(V) V  &my_mod_tap LS(B) B    &my_mod_tap LS(N) N  &my_mod_tap LS(M) M  &kp LS(KP_COMMA)     &kp KP_DOT           &my_mod_tap LS(FSLH) SLASH  &none
-                                                 &new_behavior        &mo 1                &mo 2                  &mo 3                &kp SPACE            &mo 4
+                                                 &none                &mo 1                &mo 2                  &mo 3                &kp SPACE            &mo 4
             >;
         };
 
