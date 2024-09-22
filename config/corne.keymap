@@ -12,7 +12,7 @@
     combos {
         compatible = "zmk,combos";
 
-        goto_bluetooth {
+        toggle_bluetooth {
             bindings = <&tog 5>;
             key-positions = <29 5>;
         };
@@ -30,7 +30,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <240>;
+            tapping-term-ms = <220>;
             flavor = "tap-preferred";
         };
     };
@@ -70,7 +70,7 @@
 
         upper_row {
             bindings = <
-&none  &kp F1           &kp F2           &kp F3           &kp F4           &kp F5             &kp F6           &kp F7           &kp F8           &kp F9           &kp F10          &my_mod_tap F12 F11
+&none  &kp F1           &kp F2           &kp F3           &kp F4           &kp F5             &kp F6           &kp F7           &kp F8           &kp F9           &none            &none
 &none  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_4  &kp KP_NUMBER_5    &kp KP_NUMBER_6  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMBER_0  &none
 &none  &none            &none            &none            &none            &none              &none            &none            &none            &none            &none            &none
                                          &none            &mo 1            &mo 2              &mo 3            &kp SPACE        &mo 4
@@ -79,10 +79,10 @@
 
         symbols {
             bindings = <
-&none                    &none     &none   &none     &none       &none          &none      &none          &my_mod_tap KP_MINUS KP_PLUS  &my_mod_tap KP_DIVIDE KP_MULTIPLY  &my_mod_tap UNDERSCORE KP_EQUAL  &none
-&my_mod_tap TILDE GRAVE  &kp EXCL  &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT    &kp CARET  &kp AMPERSAND  &my_mod_tap COLON SEMI        &my_mod_tap DOUBLE_QUOTES APOS     &my_mod_tap PIPE BACKSLASH       &none
-&none                    &none     &none   &none     &none       &none          &none      &none          &kp KP_COMMA                  &kp KP_DOT                         &none                            &none
-                                           &none     &mo 1       &mo 2          &mo 3      &kp SPACE      &mo 4
+&none  &my_mod_tap LS(GRAVE) GRAVE  &none   &none     &none       &none          &none      &none          &my_mod_tap KP_SUBTRACT KP_PLUS  &my_mod_tap KP_DIVIDE KP_MULTIPLY  &my_mod_tap UNDERSCORE KP_EQUAL  &none
+&none  &kp EXCL                     &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT    &kp CARET  &kp AMPERSAND  &my_mod_tap COLON SEMI           &my_mod_tap DOUBLE_QUOTES APOS     &my_mod_tap PIPE BACKSLASH       &none
+&none  &none                        &none   &none     &none       &none          &none      &none          &kp KP_COMMA                     &kp KP_DOT                         &none                            &none
+                                            &none     &mo 1       &mo 2          &mo 3      &kp SPACE      &mo 4
             >;
         };
 
