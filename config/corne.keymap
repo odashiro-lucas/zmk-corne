@@ -30,8 +30,16 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <250>;
             flavor = "tap-preferred";
+        };
+
+        new_behavior: new_behavior {
+            compatible = "zmk,behavior-mod-morph";
+            label = "NEW_BEHAVIOR";
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
+            bindings = <&kp A>;
         };
     };
 
@@ -49,7 +57,7 @@
 &none  &my_mod_tap LS(Q) Q  &my_mod_tap LS(W) W  &my_mod_tap LS(E) E  &my_mod_tap LS(R) R  &my_mod_tap LS(T) T    &my_mod_tap LS(Y) Y  &my_mod_tap LS(U) U  &my_mod_tap LS(I) I  &my_mod_tap LS(O) O  &my_mod_tap LS(P) P         &none
 &none  &my_mod_tap LS(A) A  &my_mod_tap LS(S) S  &my_mod_tap LS(D) D  &my_mod_tap LS(F) F  &my_mod_tap LS(G) G    &my_mod_tap LS(H) H  &my_mod_tap LS(J) J  &my_mod_tap LS(K) K  &my_mod_tap LS(L) L  &my_mod_tap LS(SEMI) SEMI   &none
 &none  &my_mod_tap LS(Z) Z  &my_mod_tap LS(X) X  &my_mod_tap LS(C) C  &my_mod_tap LS(V) V  &my_mod_tap LS(B) B    &my_mod_tap LS(N) N  &my_mod_tap LS(M) M  &kp LS(KP_COMMA)     &kp KP_DOT           &my_mod_tap LS(FSLH) SLASH  &none
-                                                 &mo 1                &mo 3                &mo 2                  &mo 5                &kp SPACE            &mo 4
+                                                 &new_behavior        &mo 1                &mo 2                  &mo 3                &kp SPACE            &mo 4
             >;
         };
 
@@ -61,10 +69,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&none  &none      &kp ESCAPE  &none      &none      &none    &none  &kp BACKSPACE   &kp UP_ARROW    &kp DELETE  &none  &none
-&none  &none      &kp TAB     &kp LSHFT  &kp LCTRL  &none    &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT   &none  &none
-&none  &kp LC(A)  &kp LC(X)   &kp LC(C)  &kp LC(V)  &none    &none  &none           &none           &kp RETURN  &none  &none
-                              &mo 1      &mo 3      &mo 2    &mo 5  &kp SPACE       &mo 4
+&none  &none      &kp ESCAPE  &none      &none      &none           &none  &kp BACKSPACE   &kp UP_ARROW    &kp DELETE  &none  &none
+&none  &kp LC(A)  &kp TAB     &kp LSHFT  &kp LCTRL  &kp LEFT_ALT    &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT   &none  &none
+&none  &kp LC(Z)  &kp LC(X)   &kp LC(C)  &kp LC(V)  &none           &none  &none           &none           &kp RETURN  &none  &none
+                              &none      &mo 1      &mo 2           &mo 3  &kp SPACE       &mo 4
             >;
         };
 
@@ -73,7 +81,7 @@
 &none  &kp F1           &kp F2           &kp F3           &kp F4           &kp F5             &kp F6           &kp F7           &kp F8           &kp F9           &kp F10          &my_mod_tap F12 F11
 &none  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_4  &kp KP_NUMBER_5    &kp KP_NUMBER_6  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMBER_0  &none
 &none  &none            &none            &none            &none            &none              &none            &none            &none            &none            &none            &none
-                                         &mo 1            &mo 2            &mo 2              &mo 5            &kp SPACE        &mo 4
+                                         &none            &mo 1            &mo 2              &mo 3            &kp SPACE        &mo 4
             >;
         };
 
@@ -82,34 +90,34 @@
 &none                    &none     &none   &none     &none       &none          &none      &none          &kp KP_PLUS     &kp KP_ASTERISK  &none                       &none
 &my_mod_tap TILDE GRAVE  &kp EXCL  &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT    &kp CARET  &kp AMPERSAND  &kp KP_MINUS    &kp KP_DIVIDE    &my_mod_tap PIPE BACKSLASH  &none
 &none                    &none     &none   &none     &none       &none          &none      &none          &kp UNDERSCORE  &kp KP_EQUAL     &none                       &none
-                                           &mo 1     &mo 3       &mo 2          &mo 5      &kp SPACE      &mo 4
+                                           &none     &mo 1       &mo 2          &mo 3      &kp SPACE      &mo 4
             >;
         };
 
         brackets {
             bindings = <
-&none  &none  &none  &none  &none  &none    &none  &none      &my_mod_tap LEFT_BRACKET KP_LEFT_PARENTHESIS  &my_mod_tap RIGHT_BRACKET KP_RIGHT_PARENTHESIS  &none  &none
-&none  &none  &none  &none  &none  &none    &none  &none      &kp LEFT_BRACE                                &kp RIGHT_BRACE                                 &none  &none
-&none  &none  &none  &none  &none  &none    &none  &none      &kp LESS_THAN                                 &kp GREATER_THAN                                &none  &none
-                     &mo 1  &mo 3  &mo 2    &mo 5  &kp SPACE  &mo 4
+&none  &none  &none  &none  &none  &none    &none  &none      &kp LEFT_PARENTHESIS                 &kp RIGHT_PARENTHESIS                  &none  &none
+&none  &none  &none  &none  &none  &none    &none  &none      &my_mod_tap LEFT_BRACE LEFT_BRACKET  &my_mod_tap RIGHT_BRACE RIGHT_BRACKET  &none  &none
+&none  &none  &none  &none  &none  &none    &none  &none      &kp LESS_THAN                        &kp GREATER_THAN                       &none  &none
+                     &none  &mo 1  &mo 2    &mo 3  &kp SPACE  &mo 4
             >;
         };
 
         bluetooth {
             bindings = <
-&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none    &none  &none      &none  &none  &none  &none
-&none         &none         &none         &none         &none         &none    &none  &none      &none  &none  &none  &none
-&none         &none         &none         &bt BT_CLR    &none         &none    &none  &none      &none  &none  &none  &none
-                                          &mo 1         &mo 3         &mo 2    &mo 5  &kp SPACE  &mo 4
+&none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &none  &none      &none  &none  &none  &none
+&none  &none         &none         &none         &none         &none           &none  &none      &none  &none  &none  &none
+&none  &none         &none         &bt BT_CLR    &none         &none           &none  &none      &none  &none  &none  &none
+                                   &none         &mo 1         &mo 2           &mo 3  &kp SPACE  &mo 4
             >;
         };
 
         gaming {
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E      &kp R  &kp T    &trans  &trans     &kp UP    &trans     &trans  &trans
-&kp LSHFT  &kp A  &kp S  &kp D      &kp F  &kp G    &trans  &kp LEFT   &kp DOWN  &kp RIGHT  &trans  &trans
-&kp LCTRL  &kp Z  &kp X  &kp C      &kp V  &kp B    &trans  &trans     &trans    &trans     &trans  &trans
-                         &kp SPACE  &mo 3  &mo 2    &trans  &kp SPACE  &trans
+&kp TAB    &kp Q  &kp W  &kp E      &kp R  &kp T    &none  &none      &kp UP    &none      &none  &none
+&kp LSHFT  &kp A  &kp S  &kp D      &kp F  &kp G    &none  &kp LEFT   &kp DOWN  &kp RIGHT  &none  &none
+&kp LCTRL  &kp Z  &kp X  &kp C      &kp V  &kp B    &none  &none      &none     &kp ENTER  &none  &none
+                         &kp SPACE  &mo 1  &mo 2    &mo 3  &kp SPACE  &mo 4
             >;
         };
     };
