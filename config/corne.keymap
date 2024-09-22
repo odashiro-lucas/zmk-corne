@@ -117,7 +117,16 @@
 &kp TAB    &kp Q  &kp W  &kp E      &kp R  &kp T    &none  &none      &kp UP    &none      &none  &none
 &kp LSHFT  &kp A  &kp S  &kp D      &kp F  &kp G    &none  &kp LEFT   &kp DOWN  &kp RIGHT  &none  &none
 &kp LCTRL  &kp Z  &kp X  &kp C      &kp V  &kp B    &none  &none      &none     &kp ENTER  &none  &none
-                         &kp SPACE  &mo 1  &mo 2    &mo 3  &kp SPACE  &mo 4
+                         &kp SPACE  &mo 7  &none    &none  &kp SPACE  &none
+            >;
+        };
+
+        gaming_alt {
+            bindings = <
+&kp ESCAPE  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans      &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans      &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                            &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
