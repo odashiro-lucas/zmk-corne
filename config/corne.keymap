@@ -38,7 +38,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        base {
+        alphas {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
             // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
@@ -46,9 +46,9 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&none  &my_mod_tap LS(Q) Q  &my_mod_tap LS(W) W  &my_mod_tap LS(E) E  &my_mod_tap LS(R) R  &my_mod_tap LS(T) T    &my_mod_tap LS(Y) Y  &my_mod_tap LS(U) U  &my_mod_tap LS(I) I  &my_mod_tap LS(O) O  &my_mod_tap LS(P) P         &none
-&none  &my_mod_tap LS(A) A  &my_mod_tap LS(S) S  &my_mod_tap LS(D) D  &my_mod_tap LS(F) F  &my_mod_tap LS(G) G    &my_mod_tap LS(H) H  &my_mod_tap LS(J) J  &my_mod_tap LS(K) K  &my_mod_tap LS(L) L  &my_mod_tap LS(SEMI) SEMI   &none
-&none  &my_mod_tap LS(Z) Z  &my_mod_tap LS(X) X  &my_mod_tap LS(C) C  &my_mod_tap LS(V) V  &my_mod_tap LS(B) B    &my_mod_tap LS(N) N  &my_mod_tap LS(M) M  &kp LS(KP_COMMA)     &kp KP_DOT           &my_mod_tap LS(FSLH) SLASH  &none
+&none  &my_mod_tap LS(Q) Q  &my_mod_tap LS(W) W  &my_mod_tap LS(E) E  &my_mod_tap LS(R) R  &my_mod_tap LS(T) T    &my_mod_tap LS(Y) Y  &my_mod_tap LS(U) U  &my_mod_tap LS(I) I  &my_mod_tap LS(O) O  &my_mod_tap LS(P) P  &none
+&none  &my_mod_tap LS(A) A  &my_mod_tap LS(S) S  &my_mod_tap LS(D) D  &my_mod_tap LS(F) F  &my_mod_tap LS(G) G    &my_mod_tap LS(H) H  &my_mod_tap LS(J) J  &my_mod_tap LS(K) K  &my_mod_tap LS(L) L  &none                &none
+&none  &my_mod_tap LS(Z) Z  &my_mod_tap LS(X) X  &my_mod_tap LS(C) C  &my_mod_tap LS(V) V  &my_mod_tap LS(B) B    &my_mod_tap LS(N) N  &my_mod_tap LS(M) M  &none                &none                &none                &none
                                                  &none                &mo 1                &mo 2                  &mo 3                &kp SPACE            &mo 4
             >;
         };
@@ -61,10 +61,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&none  &none      &kp ESCAPE  &none      &none      &none           &none  &kp BACKSPACE   &kp UP_ARROW    &kp DELETE  &none  &none
-&none  &kp LC(A)  &kp TAB     &kp LSHFT  &kp LCTRL  &kp LEFT_ALT    &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT   &none  &none
-&none  &kp LC(Z)  &kp LC(X)   &kp LC(C)  &kp LC(V)  &none           &none  &none           &none           &kp RETURN  &none  &none
-                              &none      &mo 1      &mo 2           &mo 3  &kp SPACE       &mo 4
+&none  &none      &kp ESCAPE  &none           &none      &none           &kp PG_UP      &kp BACKSPACE   &kp UP_ARROW    &kp DELETE  &kp HOME  &none
+&none  &kp LC(A)  &kp TAB     &sk LEFT_SHIFT  &sk LCTRL  &sk LEFT_ALT    &kp PAGE_DOWN  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT   &kp END   &none
+&none  &kp LC(Z)  &kp LC(X)   &kp LC(C)       &kp LC(V)  &none           &none          &none           &none           &kp RETURN  &none     &none
+                              &none           &mo 1      &mo 2           &mo 3          &kp SPACE       &mo 4
             >;
         };
 
@@ -77,20 +77,20 @@
             >;
         };
 
-        operators {
+        symbols {
             bindings = <
-&none                    &none     &none   &none     &none       &none          &none      &none          &kp KP_PLUS     &kp KP_ASTERISK  &none                       &none
-&my_mod_tap TILDE GRAVE  &kp EXCL  &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT    &kp CARET  &kp AMPERSAND  &kp KP_MINUS    &kp KP_DIVIDE    &my_mod_tap PIPE BACKSLASH  &none
-&none                    &none     &none   &none     &none       &none          &none      &none          &kp UNDERSCORE  &kp KP_EQUAL     &none                       &none
+&none                    &none     &none   &none     &none       &none          &none      &none          &my_mod_tap KP_MINUS KP_PLUS  &my_mod_tap KP_DIVIDE KP_MULTIPLY  &my_mod_tap UNDERSCORE KP_EQUAL  &none
+&my_mod_tap TILDE GRAVE  &kp EXCL  &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT    &kp CARET  &kp AMPERSAND  &my_mod_tap COLON SEMI        &my_mod_tap DOUBLE_QUOTES APOS     &my_mod_tap PIPE BACKSLASH       &none
+&none                    &none     &none   &none     &none       &none          &none      &none          &kp KP_COMMA                  &kp KP_DOT                         &none                            &none
                                            &none     &mo 1       &mo 2          &mo 3      &kp SPACE      &mo 4
             >;
         };
 
         brackets {
             bindings = <
-&none  &none  &none  &none  &none  &none    &none  &none      &kp LEFT_PARENTHESIS                 &kp RIGHT_PARENTHESIS                  &none  &none
-&none  &none  &none  &none  &none  &none    &none  &none      &my_mod_tap LEFT_BRACE LEFT_BRACKET  &my_mod_tap RIGHT_BRACE RIGHT_BRACKET  &none  &none
-&none  &none  &none  &none  &none  &none    &none  &none      &kp LESS_THAN                        &kp GREATER_THAN                       &none  &none
+&none  &none  &none  &none  &none  &none    &none  &none      &kp LEFT_PARENTHESIS              &kp RIGHT_PARENTHESIS                 &none  &none
+&none  &none  &none  &none  &none  &none    &none  &none      &kp LEFT_BRACKET                  &kp RIGHT_BRACKET                     &none  &none
+&none  &none  &none  &none  &none  &none    &none  &none      &my_mod_tap LESS_THAN LEFT_BRACE  &my_mod_tap GREATER_THAN RIGHT_BRACE  &none  &none
                      &none  &mo 1  &mo 2    &mo 3  &kp SPACE  &mo 4
             >;
         };
@@ -115,9 +115,9 @@
 
         gaming_alt {
             bindings = <
-&kp ESCAPE  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans      &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans      &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&kp ESCAPE  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5    &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &my_mod_tap F12 F11
+&kp GRAVE   &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &kp N6  &kp N7  &kp N8  &kp N9  &kp N0   &trans
+&trans      &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans   &trans
                             &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
