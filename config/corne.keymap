@@ -49,7 +49,7 @@
 &none  &my_mod_tap LS(Q) Q  &my_mod_tap LS(W) W  &my_mod_tap LS(E) E  &my_mod_tap LS(R) R  &my_mod_tap LS(T) T    &my_mod_tap LS(Y) Y  &my_mod_tap LS(U) U  &my_mod_tap LS(I) I  &my_mod_tap LS(O) O  &my_mod_tap LS(P) P  &none
 &none  &my_mod_tap LS(A) A  &my_mod_tap LS(S) S  &my_mod_tap LS(D) D  &my_mod_tap LS(F) F  &my_mod_tap LS(G) G    &my_mod_tap LS(H) H  &my_mod_tap LS(J) J  &my_mod_tap LS(K) K  &my_mod_tap LS(L) L  &none                &none
 &none  &my_mod_tap LS(Z) Z  &my_mod_tap LS(X) X  &my_mod_tap LS(C) C  &my_mod_tap LS(V) V  &my_mod_tap LS(B) B    &my_mod_tap LS(N) N  &my_mod_tap LS(M) M  &none                &none                &none                &none
-                                                 &none                &mo 1                &mo 2                  &mo 3                &kp SPACE            &mo 4
+                                                 &mo 3                &mo 1                &mo 2                  &none                &kp SPACE            &mo 4
             >;
         };
 
@@ -64,7 +64,7 @@
 &none  &none      &kp ESCAPE  &none           &none      &none           &kp PG_UP      &kp BACKSPACE   &kp UP_ARROW    &kp DELETE  &kp HOME  &none
 &none  &kp LC(A)  &kp TAB     &sk LEFT_SHIFT  &sk LCTRL  &sk LEFT_ALT    &kp PAGE_DOWN  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT   &kp END   &none
 &none  &kp LC(Z)  &kp LC(X)   &kp LC(C)       &kp LC(V)  &none           &none          &none           &none           &kp RETURN  &none     &none
-                              &none           &mo 1      &mo 2           &mo 3          &kp SPACE       &mo 4
+                              &mo 3           &mo 1      &mo 2           &none          &kp SPACE       &mo 4
             >;
         };
 
@@ -73,7 +73,7 @@
 &none  &kp F1           &kp F2           &kp F3           &kp F4           &kp F5             &kp F6           &kp F7           &kp F8           &kp F9           &none            &none
 &none  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_4  &kp KP_NUMBER_5    &kp KP_NUMBER_6  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMBER_0  &none
 &none  &none            &none            &none            &none            &none              &none            &none            &none            &none            &none            &none
-                                         &none            &mo 1            &mo 2              &mo 3            &kp SPACE        &mo 4
+                                         &mo 3            &mo 1            &mo 2              &none            &kp SPACE        &mo 4
             >;
         };
 
@@ -82,7 +82,7 @@
 &none  &my_mod_tap LS(GRAVE) GRAVE  &none   &none     &none       &none          &none      &none          &my_mod_tap KP_SUBTRACT KP_PLUS  &my_mod_tap KP_DIVIDE KP_MULTIPLY  &my_mod_tap UNDERSCORE EQUAL   &none
 &none  &kp EXCL                     &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT    &kp CARET  &kp AMPERSAND  &my_mod_tap COLON SEMI           &my_mod_tap DOUBLE_QUOTES APOS     &my_mod_tap PIPE BACKSLASH     &none
 &none  &none                        &none   &none     &none       &none          &none      &none          &kp COMMA                        &kp DOT                            &my_mod_tap QUESTION KP_SLASH  &none
-                                            &none     &mo 1       &mo 2          &mo 3      &kp SPACE      &mo 4
+                                            &mo 3     &mo 1       &mo 2          &none      &kp SPACE      &mo 4
             >;
         };
 
@@ -91,7 +91,7 @@
 &none  &none  &none  &none  &none  &none    &none  &none      &kp LEFT_PARENTHESIS              &kp RIGHT_PARENTHESIS                 &none  &none
 &none  &none  &none  &none  &none  &none    &none  &none      &kp LEFT_BRACKET                  &kp RIGHT_BRACKET                     &none  &none
 &none  &none  &none  &none  &none  &none    &none  &none      &my_mod_tap LESS_THAN LEFT_BRACE  &my_mod_tap GREATER_THAN RIGHT_BRACE  &none  &none
-                     &none  &mo 1  &mo 2    &mo 3  &kp SPACE  &mo 4
+                     &mo 3  &mo 1  &mo 2    &none  &kp SPACE  &mo 4
             >;
         };
 
@@ -100,7 +100,7 @@
 &none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &none  &none      &none  &none  &none  &none
 &none  &none         &none         &none         &none         &none           &none  &none      &none  &none  &none  &none
 &none  &none         &none         &bt BT_CLR    &none         &none           &none  &none      &none  &none  &none  &none
-                                   &none         &mo 1         &mo 2           &mo 3  &kp SPACE  &mo 4
+                                   &mo 3         &mo 1         &mo 2           &none  &kp SPACE  &mo 4
             >;
         };
 
