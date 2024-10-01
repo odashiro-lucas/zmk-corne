@@ -64,8 +64,8 @@
 
             bindings = <
 &none  &kp ESCAPE  &kp TAB    &kp LWIN   &none      &none           &kp HOME    &kp BACKSPACE   &kp UP_ARROW    &kp DELETE  &kp PG_UP      &bl BL_TOG
-&none  &kp LC(A)   &kp LC(S)  &kp LC(D)  &kp LCTRL  &kp LEFT_ALT    &kp END     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT   &kp PAGE_DOWN  &rgb_ug RGB_TOG
-&none  &kp LC(Z)   &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(B)       &none       &none           &none           &kp RETURN  &none          &none
+&none  &kp LC(A)   &kp LC(S)  &kp LC(D)  &kp LC(F)  &kp LCTRL       &kp END     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT   &kp PAGE_DOWN  &rgb_ug RGB_TOG
+&none  &kp LC(Z)   &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LEFT_ALT    &none       &none           &none           &kp RETURN  &none          &none
                               &none      &mo 1      &mo 2           &kp LSHIFT  &kp SPACE       &none
             >;
         };
@@ -81,10 +81,10 @@
 
         symbols {
             bindings = <
-&none  &none           &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none            &kp AT_SIGN    &kp CARET   &my_mod_tap KP_DIVIDE KP_MULTIPLY  &my_mod_tap DOUBLE_QUOTES SINGLE_QUOTE  &my_mod_tap PERCENT AMPERSAND  &my_mod_tap PIPE BACKSLASH   &none
-&none  &kp LEFT_BRACE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp RIGHT_BRACE  &kp HASH       &none       &kp KP_PLUS                        &my_mod_tap COMMA DOT                   &my_mod_tap EXCLAMATION EQUAL  &my_mod_tap COLON SEMICOLON  &none
-&none  &none           &kp LESS_THAN         &kp GREATER_THAN       &none            &kp DOLLAR     &none       &kp KP_MINUS                       &kp UNDERSCORE                          &kp ENTER                      &kp QUESTION                 &none
-                                             &none                  &mo 1            &mo 2          &kp LSHIFT  &kp SPACE                          &none
+&none  &none           &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none            &none    &kp AT      &my_mod_tap KP_DIVIDE KP_MULTIPLY  &kp CARET                               &my_mod_tap PERCENT AMPERSAND  &my_mod_tap PIPE BACKSLASH   &none
+&none  &kp LEFT_BRACE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp RIGHT_BRACE  &none    &kp HASH    &my_mod_tap KP_MINUS KP_PLUS       &my_mod_tap DOUBLE_QUOTES SINGLE_QUOTE  &my_mod_tap EXCLAMATION EQUAL  &my_mod_tap COLON SEMICOLON  &none
+&none  &none           &kp LESS_THAN         &kp GREATER_THAN       &none            &none    &kp DOLLAR  &kp UNDERSCORE                     &my_mod_tap COMMA DOT                   &kp ENTER                      &kp QUESTION                 &none
+                                             &none                  &mo 1            &mo 2    &kp LSHIFT  &kp SPACE                          &none
             >;
         };
 
