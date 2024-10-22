@@ -5,10 +5,8 @@
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/rgb.h>
 
 / {
     combos {
@@ -35,6 +33,41 @@
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
         };
+
+        up_pgup_tapdance: up_pgup_tapdance {
+            compatible = "zmk,behavior-tap-dance";
+            label = "UP_PGUP_TAPDANCE";
+            #binding-cells = <0>;
+            tapping-term-ms = <180>;
+            bindings = <&kp UP_ARROW>, <&kp PG_UP>;
+        };
+
+        down_pgdown_tapdance: down_pgdown_tapdance {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DOWN_PGDOWN_TAPDANCE";
+            #binding-cells = <0>;
+            bindings = <&kp DOWN_ARROW>, <&kp PG_DN>;
+
+            tapping-term-ms = <180>;
+        };
+
+        left_ctrlleft_home_tapdance: left_ctrlleft_home_tapdance {
+            compatible = "zmk,behavior-tap-dance";
+            label = "LEFT_CTRLLEFT_HOME_TAPDANCE";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_ARROW>, <&kp LC(LEFT_ARROW)>, <&kp HOME>;
+
+            tapping-term-ms = <180>;
+        };
+
+        right_ctrlright_end_tapdance: right_ctrlright_end_tapdance {
+            compatible = "zmk,behavior-tap-dance";
+            label = "RIGHT_CTRLRIGHT_END_TAPDANCE";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT_ARROW>, <&kp LC(RIGHT_ARROW)>, <&kp END>;
+
+            tapping-term-ms = <180>;
+        };
     };
 
     keymap {
@@ -48,9 +81,9 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&none  &kp Q  &kp W  &kp E  &kp R  &kp T    &kp Y       &kp U      &kp I  &kp O  &kp P  &none
-&none  &kp A  &kp S  &kp D  &kp F  &kp G    &kp H       &kp J      &kp K  &kp L  &none  &none
-&none  &kp Z  &kp X  &kp C  &kp V  &kp B    &kp N       &kp M      &none  &none  &none  &none
+&none  &kp Q  &kp W  &kp E  &kp R  &kp T    &kp Y       &kp U      &kp I  &kp O      &kp P  &none
+&none  &kp A  &kp S  &kp D  &kp F  &kp G    &kp H       &kp J      &kp K  &kp L      &none  &none
+&none  &kp Z  &kp X  &kp C  &kp V  &kp B    &kp N       &kp M      &none  &kp ENTER  &none  &none
                      &none  &mo 1  &mo 2    &kp LSHIFT  &kp SPACE  &none
             >;
         };
@@ -63,10 +96,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&none  &kp ESCAPE  &kp TAB    &kp LWIN   &none      &none           &kp HOME    &kp BACKSPACE   &kp UP_ARROW    &kp DELETE  &kp PG_UP      &bl BL_TOG
-&none  &kp LC(A)   &kp LC(S)  &kp LC(D)  &kp LC(F)  &kp LCTRL       &kp END     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT   &kp PAGE_DOWN  &rgb_ug RGB_TOG
-&none  &kp LC(Z)   &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LEFT_ALT    &none       &none           &none           &kp RETURN  &none          &none
-                              &none      &mo 1      &mo 2           &kp LSHIFT  &kp SPACE       &none
+&none  &kp ESCAPE  &kp TAB    &kp LWIN   &none      &none           &none       &kp BACKSPACE                 &up_pgup_tapdance      &kp DELETE                     &none  &none
+&none  &kp LC(A)   &kp LC(S)  &kp LC(D)  &kp LC(F)  &kp LCTRL       &none       &left_ctrlleft_home_tapdance  &down_pgdown_tapdance  &right_ctrlright_end_tapdance  &none  &none
+&none  &kp LC(Z)   &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LEFT_ALT    &none       &none                         &none                  &kp RETURN                     &none  &none
+                              &none      &mo 1      &mo 2           &kp LSHIFT  &kp SPACE                     &none
             >;
         };
 
@@ -74,7 +107,7 @@
             bindings = <
 &none  &kp F1           &kp F2           &kp F3           &kp F4           &kp F5             &kp F6           &kp F7           &kp F8           &kp F9           &kp F10          &my_mod_tap F12 F11
 &none  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_4  &kp KP_NUMBER_5    &kp KP_NUMBER_6  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMBER_0  &none
-&none  &none            &none            &none            &none            &none              &none            &none            &none            &none            &none            &none
+&none  &none            &none            &none            &none            &none              &none            &none            &none            &kp ENTER        &none            &none
                                          &none            &mo 1            &mo 2              &kp LSHIFT       &kp SPACE        &none
             >;
         };
