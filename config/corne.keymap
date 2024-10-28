@@ -33,41 +33,6 @@
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
         };
-
-        up_pgup_tapdance: up_pgup_tapdance {
-            compatible = "zmk,behavior-tap-dance";
-            label = "UP_PGUP_TAPDANCE";
-            #binding-cells = <0>;
-            tapping-term-ms = <180>;
-            bindings = <&kp UP_ARROW>, <&kp PG_UP>;
-        };
-
-        down_pgdown_tapdance: down_pgdown_tapdance {
-            compatible = "zmk,behavior-tap-dance";
-            label = "DOWN_PGDOWN_TAPDANCE";
-            #binding-cells = <0>;
-            bindings = <&kp DOWN_ARROW>, <&kp PG_DN>;
-
-            tapping-term-ms = <180>;
-        };
-
-        left_ctrlleft_home_tapdance: left_ctrlleft_home_tapdance {
-            compatible = "zmk,behavior-tap-dance";
-            label = "LEFT_CTRLLEFT_HOME_TAPDANCE";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_ARROW>, <&kp LC(LEFT_ARROW)>, <&kp HOME>;
-
-            tapping-term-ms = <180>;
-        };
-
-        right_ctrlright_end_tapdance: right_ctrlright_end_tapdance {
-            compatible = "zmk,behavior-tap-dance";
-            label = "RIGHT_CTRLRIGHT_END_TAPDANCE";
-            #binding-cells = <0>;
-            bindings = <&kp RIGHT_ARROW>, <&kp LC(RIGHT_ARROW)>, <&kp END>;
-
-            tapping-term-ms = <180>;
-        };
     };
 
     keymap {
@@ -96,10 +61,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&none  &kp ESCAPE  &kp TAB    &kp LWIN   &none      &none           &none       &kp BACKSPACE                 &up_pgup_tapdance      &kp DELETE                     &none  &none
-&none  &kp LC(A)   &kp LC(S)  &kp LC(D)  &kp LC(F)  &kp LCTRL       &none       &left_ctrlleft_home_tapdance  &down_pgdown_tapdance  &right_ctrlright_end_tapdance  &none  &none
-&none  &kp LC(Z)   &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LEFT_ALT    &none       &none                         &none                  &kp RETURN                     &none  &none
-                              &none      &mo 1      &mo 2           &kp LSHIFT  &kp SPACE                     &none
+&none  &kp ESCAPE  &kp TAB    &kp LWIN   &none      &none           &none       &kp BACKSPACE  &kp UP    &kp DELETE  &none  &none
+&none  &kp LC(A)   &kp LC(S)  &kp LC(D)  &kp LC(F)  &kp LCTRL       &none       &kp LEFT       &kp DOWN  &kp RIGHT   &none  &none
+&none  &kp LC(Z)   &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LEFT_ALT    &none       &none          &none     &kp RETURN  &none  &none
+                              &none      &mo 1      &mo 2           &kp LSHIFT  &kp SPACE      &none
             >;
         };
 
