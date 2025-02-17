@@ -66,10 +66,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&none  &kp ESCAPE  &kp TAB    &kp LWIN   &kp LC(R)  &kp LC(T)    &kp HOME    &kp BACKSPACE      &kp UP    &kp DELETE  &kp PAGE_UP    &none
-&none  &kp LC(A)   &kp LC(S)  &kp LC(D)  &kp LC(F)  &kp LC(G)    &kp END     &kp LEFT           &kp DOWN  &kp RIGHT   &kp PAGE_DOWN  &none
-&none  &kp LC(Z)   &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(B)    &none       &kp RIGHT_ALT      &none     &kp RETURN  &none          &none
-                              &none      &mo 1      &mo 2        &kp LSHIFT  &kp RIGHT_CONTROL  &none
+&none  &kp ESCAPE  &kp TAB    &kp LWIN   &kp LC(R)  &kp LC(T)    &kp HOME    &kp BACKSPACE     &kp UP    &kp DELETE  &kp PAGE_UP    &none
+&none  &kp LC(A)   &kp LC(S)  &kp LC(D)  &kp LC(F)  &kp LC(G)    &kp END     &kp LEFT          &kp DOWN  &kp RIGHT   &kp PAGE_DOWN  &none
+&none  &kp LC(Z)   &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(B)    &none       &kp LEFT_ALT      &none     &kp RETURN  &none          &none
+                              &none      &mo 1      &mo 2        &kp LSHIFT  &kp LEFT_CONTROL  &none
             >;
         };
 
