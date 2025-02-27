@@ -54,9 +54,9 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB         &kp Q  &kp W  &kp E         &kp R  &kp T    &kp Y  &kp U      &kp I         &kp O       &kp P          &none
-&kp LEFT_SHIFT  &kp A  &kp S  &kp D         &kp F  &kp G    &kp H  &kp J      &kp K         &kp L       &kp SEMICOLON  &kp APOS
-&kp LCTRL       &kp Z  &kp X  &kp C         &kp V  &kp B    &kp N  &kp M      &kp KP_COMMA  &kp KP_DOT  &kp SLASH      &kp RIGHT_SHIFT
+&kp TAB         &kp Q  &kp W  &kp E         &kp R  &kp T    &kp Y  &kp U      &kp I      &kp O    &kp P          &none
+&kp LEFT_SHIFT  &kp A  &kp S  &kp D         &kp F  &kp G    &kp H  &kp J      &kp K      &kp L    &kp SEMICOLON  &kp APOS
+&kp LCTRL       &kp Z  &kp X  &kp C         &kp V  &kp B    &kp N  &kp M      &kp COMMA  &kp DOT  &kp SLASH      &kp RIGHT_SHIFT
                               &kp LEFT_ALT  &mo 1  &mo 2    &mo 3  &kp SPACE  &none
             >;
         };
@@ -78,17 +78,17 @@
 
         upper_row {
             bindings = <
-&trans  &kp F1     &kp F2     &kp F3     &kp F4     &kp F5       &kp F6     &kp F7     &kp F8     &kp F9           &kp F10          &my_mod_tap F12 F11
-&trans  &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_N4  &kp KP_N5    &kp KP_N6  &kp KP_N7  &kp KP_N8  &kp KP_NUMBER_9  &kp KP_NUMBER_0  &trans
-&trans  &trans     &trans     &trans     &trans     &trans       &trans     &trans     &trans     &trans           &trans           &trans
-                              &trans     &mo 1      &mo 2        &none      &trans     &none
+&trans  &kp F1           &kp F2           &kp F3           &kp F4           &kp F5             &kp F6           &kp F7           &kp F8           &kp F9           &kp F10          &my_mod_tap F12 F11
+&trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_4  &kp KP_NUMBER_5    &kp KP_NUMBER_6  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMBER_0  &trans
+&trans  &trans           &trans           &trans           &trans           &trans             &trans           &trans           &trans           &trans           &trans           &trans
+                                          &trans           &mo 1            &mo 2              &none            &trans           &none
             >;
         };
 
         symbols {
             bindings = <
 &trans  &trans          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp TILDE        &kp AT_SIGN    &trans       &kp CARET       &kp KP_PLUS      &kp KP_MULTIPLY  &trans    &trans
-&trans  &kp LEFT_BRACE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp RIGHT_BRACE  &kp HASH       &kp PERCENT  &kp AMPERSAND   &kp EXCLAMATION  &kp KP_EQUAL     &kp PIPE  &trans
+&trans  &kp LEFT_BRACE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp RIGHT_BRACE  &kp HASH       &kp PERCENT  &kp AMPERSAND   &kp EXCLAMATION  &kp EQUAL        &kp PIPE  &trans
 &trans  &trans          &kp LESS_THAN         &kp GREATER_THAN       &kp BACKSLASH    &kp DOLLAR     &trans       &kp UNDERSCORE  &kp KP_MINUS     &kp KP_DIVIDE    &trans    &trans
                                               &trans                 &none            &none          &mo 3        &trans          &none
             >;
