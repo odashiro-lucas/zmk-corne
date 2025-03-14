@@ -132,7 +132,7 @@
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
-        nav+sym_upper {
+        nav_and_sym_does_upper {
             if-layers = <1 3>;
             then-layer = <2>;
         };
