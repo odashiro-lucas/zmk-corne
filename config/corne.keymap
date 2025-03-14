@@ -68,7 +68,7 @@
 
             bindings = <
 &none  &kp ESCAPE  &kp TAB    &none      &none      &none    &kp PG_UP  &kp BACKSPACE  &kp UP    &kp DELETE  &kp INS         &kp PAGE_DOWN
-&none  &kp LC(A)   &kp LC(S)  &none      &none      &none    &kp HOME   &kp LEFT       &kp DOWN  &kp RIGHT   &kp LEFT_SHIFT  &kp END
+&none  &kp LC(A)   &kp LC(S)  &none      &kp LC(F)  &none    &kp HOME   &kp LEFT       &kp DOWN  &kp RIGHT   &kp LEFT_SHIFT  &kp END
 &none  &kp LC(Z)   &kp LC(X)  &kp LC(C)  &kp LC(V)  &none    &none      &kp LEFT_ALT   &none     &kp ENTER   &none           &none
                               &none      &mo 1      &mo 2    &kp LCTRL  &kp SPACE      &none
             >;
