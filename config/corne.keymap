@@ -74,21 +74,21 @@
             >;
         };
 
-        symbols {
-            bindings = <
-&none  &kp GRAVE       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DOLLAR       &kp CARET    &kp PERCENT     &kp EXCL        &kp ASTERISK  &kp SLASH  &kp BACKSLASH  &kp PIPE
-&none  &kp LEFT_BRACE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp RIGHT_BRACE  &none        &kp HASH        &kp MINUS       &kp PLUS      &kp EQUAL  &kp SEMICOLON  &kp APOS
-&none  &none           &kp LESS_THAN         &kp GREATER_THAN       &kp AT           &none        &kp AMPERSAND   &kp UNDERSCORE  &kp COMMA     &kp DOT    &kp QUESTION   &none
-                                             &none                  &mo 1            &mo 2        &kp LEFT_SHIFT  &kp SPACE       &none
-            >;
-        };
-
         upper_row {
             bindings = <
 &none  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5    &kp F6  &kp F7     &kp F8  &kp F9  &kp F10  &my_mod_tap F12 F11
 &none  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &kp N6  &kp N7     &kp N8  &kp N9  &kp N0   &none
 &none  &none   &none   &none   &none   &none     &none   &none      &none   &none   &none    &none
                        &none   &mo 1   &mo 2     &none   &kp SPACE  &none
+            >;
+        };
+
+        symbols {
+            bindings = <
+&none  &kp GRAVE       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DOLLAR       &kp CARET    &kp PERCENT     &kp EXCL        &kp ASTERISK  &kp SLASH  &kp BACKSLASH  &kp PIPE
+&none  &kp LEFT_BRACE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp RIGHT_BRACE  &none        &kp HASH        &kp MINUS       &kp PLUS      &kp EQUAL  &kp SEMICOLON  &kp APOS
+&none  &none           &kp LESS_THAN         &kp GREATER_THAN       &kp AT           &none        &kp AMPERSAND   &kp UNDERSCORE  &kp COMMA     &kp DOT    &kp QUESTION   &none
+                                             &none                  &mo 1            &mo 2        &kp LEFT_SHIFT  &kp SPACE       &none
             >;
         };
 
@@ -132,7 +132,7 @@
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
-        nav_and_sym_does_upper {
+        one_and_two_does_three {
             if-layers = <1 2>;
             then-layer = <3>;
         };
