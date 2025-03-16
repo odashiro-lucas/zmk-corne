@@ -14,7 +14,7 @@
         compatible = "zmk,combos";
 
         toggle_bluetooth {
-            bindings = <&tog 5>;
+            bindings = <&tog 4>;
             key-positions = <29 5>;
         };
 
