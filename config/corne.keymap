@@ -59,10 +59,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&none  &kp Q  &kp W  &kp E  &kp R  &kp T    &kp Y           &kp U      &kp I      &kp O       &kp P          &none
-&none  &kp A  &kp S  &kp D  &kp F  &kp G    &kp H           &kp J      &kp K      &kp L       &kp SEMICOLON  &none
-&none  &kp Z  &kp X  &kp C  &kp V  &kp B    &kp N           &kp M      &kp COMMA  &kp PERIOD  &kp SLASH      &none
-                     &mo 7  &mo 1  &mo 2    &kp LEFT_SHIFT  &kp SPACE  &none
+&none             &kp Q  &kp W  &kp E  &kp R  &kp T    &kp Y           &kp U      &kp I         &kp O       &kp P          &none
+&kp LEFT_SHIFT    &kp A  &kp S  &kp D  &kp F  &kp G    &kp H           &kp J      &kp K         &kp L       &kp SEMICOLON  &none
+&kp LEFT_CONTROL  &kp Z  &kp X  &kp C  &kp V  &kp B    &kp N           &kp M      &kp COMMA     &kp PERIOD  &kp SLASH      &none
+                                &mo 7  &mo 1  &mo 2    &kp LEFT_SHIFT  &kp SPACE  &kp LEFT_WIN
             >;
         };
 
@@ -74,19 +74,19 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&none  &kp ESCAPE  &kp TAB    &none      &none      &none    &kp PG_UP       &kp BACKSPACE  &kp UP      &kp DELETE  &kp PAGE_DOWN  &none
-&none  &kp LC(A)   &kp LC(S)  &none      &kp LC(F)  &none    &kp HOME        &kp LEFT       &kp DOWN    &kp RIGHT   &kp END        &none
-&none  &kp LC(Z)   &kp LC(X)  &kp LC(C)  &kp LC(V)  &none    &none           &kp LEFT_ALT   &kp INSERT  &kp ENTER   &none          &none
-                              &none      &mo 1      &mo 2    &kp LEFT_SHIFT  &kp LCTRL      &none
+&none             &kp ESCAPE  &kp TAB    &none      &none      &none    &kp PG_UP       &kp BACKSPACE  &kp UP        &kp DELETE  &kp PAGE_DOWN  &none
+&kp LEFT_SHIFT    &kp LC(A)   &kp LC(S)  &none      &kp LC(F)  &none    &kp HOME        &kp LEFT       &kp DOWN      &kp RIGHT   &kp END        &none
+&kp LEFT_CONTROL  &kp LC(Z)   &kp LC(X)  &kp LC(C)  &kp LC(V)  &none    &none           &kp LEFT_ALT   &kp INSERT    &kp ENTER   &none          &none
+                                         &none      &mo 1      &mo 2    &kp LEFT_SHIFT  &kp LCTRL      &kp LEFT_WIN
             >;
         };
 
         upper_row {
             bindings = <
-&none  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5    &kp F6          &kp F7     &kp F8     &kp F9      &f10_f11_f12  &none
-&none  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &kp N6          &kp N7     &kp N8     &kp N9      &kp N0        &none
-&none  &none   &none   &none   &none   &none     &none           &none      &kp COMMA  &kp PERIOD  &kp SLASH     &none
-                       &none   &mo 1   &mo 2     &kp LEFT_SHIFT  &kp SPACE  &none
+&none  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5    &kp F6          &kp F7     &kp F8        &kp F9   &f10_f11_f12  &none
+&none  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &kp N6          &kp N7     &kp N8        &kp N9   &kp N0        &none
+&none  &none   &none   &none   &none   &none     &none           &none      &kp COMMA     &kp DOT  &none         &none
+                       &none   &mo 1   &mo 2     &kp LEFT_SHIFT  &kp SPACE  &kp LEFT_WIN
             >;
         };
 
@@ -95,7 +95,7 @@
 &none  &kp GRAVE       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DOLLAR       &kp CARET    &kp PERCENT     &kp EXCL        &kp ASTERISK  &kp APOS   &kp BACKSLASH  &none
 &none  &kp LEFT_BRACE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp RIGHT_BRACE  &none        &kp HASH        &kp MINUS       &kp PLUS      &kp EQUAL  &kp SEMICOLON  &none
 &none  &none           &kp LESS_THAN         &kp GREATER_THAN       &kp AT           &none        &kp AMPERSAND   &kp UNDERSCORE  &kp COMMA     &kp DOT    &kp SLASH      &none
-                                             &none                  &mo 1            &mo 2        &kp LEFT_SHIFT  &kp SPACE       &none
+                                             &none                  &mo 1            &mo 2        &kp LEFT_SHIFT  &kp SPACE       &kp LEFT_WIN
             >;
         };
 
